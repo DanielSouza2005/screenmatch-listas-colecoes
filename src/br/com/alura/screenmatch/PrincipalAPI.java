@@ -1,5 +1,11 @@
 package br.com.alura.screenmatch;
 
+import br.com.alura.screenmatch.modelos.Titulo;
+import br.com.alura.screenmatch.modelos.TituloOMDB;
+import com.google.gson.FieldNamingPolicy;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -24,5 +30,13 @@ public class PrincipalAPI {
                 .send(httpRequest, HttpResponse.BodyHandlers.ofString());
 
         System.out.println(response.body());
+
+        Gson gson = new GsonBuilder()
+                .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
+                .create();
+        TituloOMDB tituloOMBD = gson.fromJson(response.body(), TituloOMDB.class);
+        System.out.println(tituloOMBD);
+        Titulo titulo = new Titulo(tituloOMBD);
+        System.out.println(titulo + "" + titulo.getAnoDeLancamento() + "" + titulo.getDuracaoEmMinutos());
     }
 }
