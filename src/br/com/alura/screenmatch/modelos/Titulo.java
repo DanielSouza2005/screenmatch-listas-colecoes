@@ -22,8 +22,8 @@ public class Titulo implements Comparable<Titulo> {
             throw new ErroDeConversaoAnoException("Não foi possível converter o ano pois tem mais de 4 caracteres");
         }
 
-        this.setAnoDeLancamento(Integer.parseInt(tituloOMBD.year()));
-        this.setDuracaoEmMinutos(Integer.parseInt(tituloOMBD.runtime().substring(0, 3)));
+        this.setAnoDeLancamento(Integer.valueOf(tituloOMBD.year()));
+        this.setDuracaoEmMinutos(Integer.valueOf(tituloOMBD.runtime().substring(0, 2)));
     }
 
     public String getNome() {
