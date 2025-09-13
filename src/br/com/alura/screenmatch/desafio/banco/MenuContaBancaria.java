@@ -1,7 +1,7 @@
-package br.com.alura.screenmatch.desafio;
+package br.com.alura.screenmatch.desafio.banco;
 
-import br.com.alura.screenmatch.desafio.Classes.CartaoCredito;
-import br.com.alura.screenmatch.desafio.Classes.Compra;
+import br.com.alura.screenmatch.desafio.banco.Classes.CartaoCredito;
+import br.com.alura.screenmatch.desafio.banco.Classes.Compra;
 
 import java.util.*;
 

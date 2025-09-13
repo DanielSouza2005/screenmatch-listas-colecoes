@@ -1,4 +1,4 @@
-package br.com.alura.screenmatch.desafio.Classes;
+package br.com.alura.screenmatch.desafio.banco.Classes;
 
 public class Compra {
     private String descricao;

@@ -1,4 +1,4 @@
-package br.com.alura.screenmatch.desafio.Classes;
+package br.com.alura.screenmatch.desafio.banco.Classes;
 
 import java.util.ArrayList;
 import java.util.Comparator;
